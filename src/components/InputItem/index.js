@@ -3,7 +3,6 @@ import { Input, Form, Button, Row, Col } from "antd";
 import styles from "./index.module.less";
 export default function InputItem(props) {
   const { name, rules, ...rest } = props;
-  console.log(rules);
   const [timing, setTiming] = useState(false); //是否在倒计时
   const [count, setCount] = useState(60); //倒计时秒数
   const handleClickCaptcha = () => {
@@ -51,9 +50,10 @@ export default function InputItem(props) {
     );
   }
   return (
-    <Form.Item name={name} rules={rules}>
-      {" "}
-      <Input {...rest} />
+    <Form.Item>
+      <Form.Item name={name} rules={rules} noStyle>
+        <Input {...rest} />
+      </Form.Item>
     </Form.Item>
   );
 }

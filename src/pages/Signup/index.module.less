@@ -20,7 +20,7 @@
     margin-top: 24px;
     line-height: 22px;
   }
-  .signup {
+  .login {
     float: right;
   }
   .icon {
@@ -32,6 +32,27 @@
     transition: all 0.2s;
     &:hover {
       color: @primary-color;
+    }
+  }
+}
+.success,
+.normal,
+.exception {
+  transition: color, 0.3s;
+}
+.success {
+  color: @success-color;
+}
+.normal {
+  color: @warning-color;
+}
+.exception {
+  color: @error-color;
+}
+.progress-pass {
+  :global {
+    .ant-progress-bg {
+      background-color: @warning-color;
     }
   }
 }

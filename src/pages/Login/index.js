@@ -18,7 +18,9 @@ const { TabPane } = Tabs;
 export default function Login() {
   const [autoLogin, setAutoLogin] = useState(false);
   const [form] = Form.useForm();
-  const handleFinish = (values) => {};
+  const handleFinish = (values) => {
+    console.log(values);
+  };
   return (
     <div className={styles.container}>
       <div className={styles.login}>
